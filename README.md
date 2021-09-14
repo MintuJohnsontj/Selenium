@@ -87,3 +87,5 @@ WebDriver Architecture is made up of four major components:
 * JSON wire protocol over HTTP
 * Browser Drivers
 * Browsers    
+
+<img src="Images/SeleniumWebDriverArchitecture.png">    
