@@ -7,7 +7,6 @@
 * XML was designed to store and transport data
 * XML was designed to be self-descriptive
 
-
     <note>
       <to>Tove</to>
       <from>Jani</from>
@@ -15,7 +14,7 @@
       <body>Don't forget me this weekend!</body>
     </note>
   
- The XML above is quite self-descriptive:
+The XML above is quite self-descriptive:
 
 It has sender information, receiver information, a heading and a message body. But still, the XML above does not DO anything. XML is just information wrapped in tags. Someone must write a piece of software to send, receive, store, or display it.
 
