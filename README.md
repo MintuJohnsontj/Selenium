@@ -8,12 +8,12 @@
 * XML was designed to be self-descriptive
 
 
-  <note>
-    <to>Tove</to>
-    <from>Jani</from>
-    <heading>Reminder</heading>
-    <body>Don't forget me this weekend!</body>
-  </note>
+    <note>
+      <to>Tove</to>
+      <from>Jani</from>
+      <heading>Reminder</heading>
+      <body>Don't forget me this weekend!</body>
+    </note>
   
  The XML above is quite self-descriptive:
 
