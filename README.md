@@ -89,3 +89,19 @@ WebDriver Architecture is made up of four major components:
 * Browsers    
 
 <img src="Images/SeleniumWebDriverArchitecture.png">    
+
+#### 1. Selenium Client Libraries/Language Bindings    
+    
+Selenium provides support to multiple libraries such as Ruby, Python, Java, etc as language bindings have been developed by Selenium developers to provide compatibility for multiple languages. For instance, if you want to use the browser driver in Python, use the Python Bindings. You can download all the supported language bindings of your choice from the official site of Selenium.    
+
+#### 2. JSON Wire Protocol   
+
+JSON is an acronym for JavaScript Object Notation. It is an open standard that provides a transport mechanism for transferring data between client and server on the web. It provides support for various data structures like arrays and objects which makes it easier to read and write data from JSON.
+
+JSON serves as a REST (Representational State Transfer) API that exchanges information between HTTP servers.
+    
+#### 3. Browser Drivers  
+    
+Selenium provides drivers specific to each browser and without revealing the internal logic of browser functionality, the browser driver interacts with the respective browser by establishing a secure connection. These browser drivers are also specific to the language which is used for test case automation like C#, Python, Java, etc.
+
+You can download the browser driver of your choice as per your language requirements. For example, you can configure Selenium Web driver for Python on BrowserStack.    
