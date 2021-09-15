@@ -158,7 +158,7 @@ Once the program is executed, every line of code/script will get transformed int
     
 The URL after JSON conversion looks as follows:
     
-    https://localhost:8080/{"url":https://www.homedepot.com/l/"}
+    https://localhost:8080/{"url":"https://www.homedepot.com/l/"}
     
 To receive the HTTP requests, every Browser Driver uses an HTTP server. Once the browser driver receives the URL, it processes the request by passing it to the real browser over HTTP. And then all your commands in the Selenium scripts will be executed.
     
@@ -172,7 +172,7 @@ If it’s a GET request then it results in a response that will be generated at 
    
 ### Step 1: Create a WebDriver instance
         
-        PATH = "/home/mintu/Downloads/Miscelleneous/chromedriver_linux64/chromedriver"
+        PATH = "/home/user1/Downloads/chromedriver_linux64/chromedriver"
         driver = webdriver.Chrome(PATH)
         driver.get("https://www.techwithtim.net/")
         print(driver.title)
