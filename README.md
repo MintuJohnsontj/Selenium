@@ -168,32 +168,20 @@ There are two types of requests you might be familiar with – GET and POST.
 
 If it’s a GET request then it results in a response that will be generated at the browser end and it will be sent over HTTP to the browser driver and eventually, the browser driver with the help of JSON wire protocol sends it to the UI (Eclipse IDE).    
     
-## How to use Selenium WebDriver: Example  
+## Algorithm 
+   
+## Step 1: Create a WebDriver instance
+        
+        PATH = "/home/mintu/Downloads/Miscelleneous/chromedriver_linux64/chromedriver"
+        driver = webdriver.Chrome(PATH)
+        driver.get("https://www.techwithtim.net/")
+        print(driver.title)
+        
+## Step 2: Locate a web element on the webpage via locators in selenium.   
     
-The code below automates the login function on the BrowserStack Sign-in page in Chrome:
+        search = driver.find_element_by_name("s")
     
-    import selenium.By
-    import selenium.WebDriver
-    import selenium.WebElement
-    import selenium.chrome.ChromeDriver
-    import org.testng.Assert
-    import org.testng.annotations.Test
+ ## Step 3: Perform one or more user actions on the element
     
-    class LoginAutomation {
-    @Test
-    public void login() {
-    System.setProperty("webdriver.chrome.driver", "path of driver");
-    WebDriver driver=new ChromeDriver();
-    driver.manage().window().maximize();
-    driver.get("https://www.browserstack.com/users/sign_in");
-    WebElement username=driver.findElement(By.id("user_email_Login"));
-    WebElement password=driver.findElement(By.id("user_password"));
-    WebElement login=driver.findElement(By.name("commit"));
-    username.sendKeys("abc@gmail.com");
-    password.sendKeys("your_password");
-    login.click();
-    String actualUrl="https://live.browserstack.com/dashboard";
-    String expectedUrl= driver.getCurrentUrl();
-    Assert.assertEquals(expectedUrl,actualUrl);
-    }
-    }
+        search.send_keys("python")
+    
