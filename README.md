@@ -128,3 +128,70 @@ As discussed earlier, Selenium provides support for multiple browsers like Chrom
 * Record results and compare results from them to the expected output.
 
 In order to run tests, one must be familiar with the Basic Commands in Selenium WebDriver.    
+
+## How Selenium WebDriver Works?   
+    
+On a high-level, Selenium WebDriver works in three steps:
+    
+* Test commands are converted into an HTTP request by the JSON wire protocol.
+
+* Before executing any test cases, every browser has its own driver which initializes the server.
+    
+* The browser then starts receiving the request through its driver.
+    
+    # init driver and implicit wait
+    exec_path = "C:/Users/user1/Downloads/chromedriver_win32/chromedriver.exe"
+    driver = webdriver.Chrome(options = options, executable_path = exec_path)
+    driver.get("https://www.homedepot.com/l/")
+    
+As soon as you complete writing your code, execute the program. The above code will result in the launching of the Chrome browser which will navigate to the BrowserStack website.
+    
+Now let us understand what goes behind the scene when you click on Run until the launching of the Chrome Browser.
+
+Once the program is executed, every line of code/script will get transformed into a URL. The JSON Wire protocol over HTTP makes this possible. Then this URL is passed to the browser drivers (in our example, the ChromeDriver). At this point, our client library (Python in our example) translates the code into JSON format and interacts with the ChromeDriver.
+    
+Now let us understand what goes behind the scene when you click on Run until the launching of the Chrome Browser.
+
+Once the program is executed, every line of code/script will get transformed into a URL. The JSON Wire protocol over HTTP makes this possible. Then this URL is passed to the browser drivers (in our example, the ChromeDriver). At this point, our client library (Python in our example) translates the code into JSON format and interacts with the ChromeDriver.
+    
+The URL after JSON conversion looks as follows:
+    
+    https://localhost:8080/{"url":https://www.homedepot.com/l/"}
+    
+To receive the HTTP requests, every Browser Driver uses an HTTP server. Once the browser driver receives the URL, it processes the request by passing it to the real browser over HTTP. And then all your commands in the Selenium scripts will be executed.
+    
+Types of Requests:
+
+There are two types of requests you might be familiar with – GET and POST.
+
+If it’s a GET request then it results in a response that will be generated at the browser end and it will be sent over HTTP to the browser driver and eventually, the browser driver with the help of JSON wire protocol sends it to the UI (Eclipse IDE).    
+    
+## How to use Selenium WebDriver: Example  
+    
+The code below automates the login function on the BrowserStack Sign-in page in Chrome:
+    
+    import selenium.By
+    import selenium.WebDriver
+    import selenium.WebElement
+    import selenium.chrome.ChromeDriver
+    import org.testng.Assert
+    import org.testng.annotations.Test
+    
+    class LoginAutomation {
+    @Test
+    public void login() {
+    System.setProperty("webdriver.chrome.driver", "path of driver");
+    WebDriver driver=new ChromeDriver();
+    driver.manage().window().maximize();
+    driver.get("https://www.browserstack.com/users/sign_in");
+    WebElement username=driver.findElement(By.id("user_email_Login"));
+    WebElement password=driver.findElement(By.id("user_password"));
+    WebElement login=driver.findElement(By.name("commit"));
+    username.sendKeys("abc@gmail.com");
+    password.sendKeys("your_password");
+    login.click();
+    String actualUrl="https://live.browserstack.com/dashboard";
+    String expectedUrl= driver.getCurrentUrl();
+    Assert.assertEquals(expectedUrl,actualUrl);
+    }
+    }
