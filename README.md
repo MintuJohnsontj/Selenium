@@ -139,8 +139,6 @@ On a high-level, Selenium WebDriver works in three steps:
     
 * The browser then starts receiving the request through its driver.
     
-    # init driver and implicit wait
-    
     exec_path = "C:/Users/user1/Downloads/chromedriver_win32/chromedriver.exe"
     
     driver = webdriver.Chrome(options = options, executable_path = exec_path)
