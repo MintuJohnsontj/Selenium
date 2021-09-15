@@ -112,3 +112,19 @@ When a test script is executed with the help of WebDriver, the following tasks a
 * The HTTP request is received by the driver through an HTTP server
 * All the steps/instructions to be executed on the browser is decided by an HTTP server
 * The HTTP server then receives the execution status and in turn sends it back to the automation scripts
+    
+#### 4.Browsers
+
+As discussed earlier, Selenium provides support for multiple browsers like Chrome, Firefox, Safari, Internet Explorer etc.    
+    
+## Basic Steps in a Selenium WebDriver Script 
+    
+* Create a WebDriver instance.
+* Navigate to a webpage.
+* Locate a web element on the webpage via locators in selenium.
+* Perform one or more user actions on the element.
+* Preload the expected output/browser response to the action.
+* Run test.
+* Record results and compare results from them to the expected output.
+
+In order to run tests, one must be familiar with the Basic Commands in Selenium WebDriver.    
