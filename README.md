@@ -113,7 +113,7 @@ When a test script is executed with the help of WebDriver, the following tasks a
 * All the steps/instructions to be executed on the browser is decided by an HTTP server
 * The HTTP server then receives the execution status and in turn sends it back to the automation scripts
     
-#### 4.Browsers
+#### 4. Browsers
 
 As discussed earlier, Selenium provides support for multiple browsers like Chrome, Firefox, Safari, Internet Explorer etc.    
     
