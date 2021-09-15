@@ -170,18 +170,18 @@ If it’s a GET request then it results in a response that will be generated at 
     
 ## Algorithm 
    
-## Step 1: Create a WebDriver instance
+### Step 1: Create a WebDriver instance
         
         PATH = "/home/mintu/Downloads/Miscelleneous/chromedriver_linux64/chromedriver"
         driver = webdriver.Chrome(PATH)
         driver.get("https://www.techwithtim.net/")
         print(driver.title)
         
-## Step 2: Locate a web element on the webpage via locators in selenium.   
+### Step 2: Locate a web element on the webpage via locators in selenium.   
     
         search = driver.find_element_by_name("s")
     
- ## Step 3: Perform one or more user actions on the element
+### Step 3: Perform one or more user actions on the element
     
         search.send_keys("python")
     
