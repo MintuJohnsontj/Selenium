@@ -140,8 +140,11 @@ On a high-level, Selenium WebDriver works in three steps:
 * The browser then starts receiving the request through its driver.
     
     # init driver and implicit wait
+    
     exec_path = "C:/Users/user1/Downloads/chromedriver_win32/chromedriver.exe"
+    
     driver = webdriver.Chrome(options = options, executable_path = exec_path)
+    
     driver.get("https://www.homedepot.com/l/")
     
 As soon as you complete writing your code, execute the program. The above code will result in the launching of the Chrome browser which will navigate to the BrowserStack website.
