@@ -104,4 +104,4 @@ JSON serves as a REST (Representational State Transfer) API that exchanges infor
     
 Selenium provides drivers specific to each browser and without revealing the internal logic of browser functionality, the browser driver interacts with the respective browser by establishing a secure connection. These browser drivers are also specific to the language which is used for test case automation like C#, Python, Java, etc.
 
-    You can download the browser driver of your choice as per your language requirements. For example, you can configure Selenium Web driver for Python on BrowserStack.    
+You can download the browser driver of your choice as per your language requirements. For example, you can configure Selenium Web driver for Python on BrowserStack.    
