@@ -146,7 +146,7 @@ On a high-level, Selenium WebDriver works in three steps:
 
         driver = webdriver.Chrome(options = options, executable_path = exec_path)
 
-        driver.get("https://www.homedepot.com/l/")
+        driver.get("https://www.techwithti.net/")
     
 As soon as you complete writing your code, execute the program. The above code will result in the launching of the Chrome browser which will navigate to the BrowserStack website.
     
@@ -160,7 +160,7 @@ Once the program is executed, every line of code/script will get transformed int
     
 The URL after JSON conversion looks as follows:
     
-    https://localhost:8080/{"url":"https://www.homedepot.com/l/"}
+    https://localhost:8080/{"url":"https://www.techwithtim.net/"}
     
 To receive the HTTP requests, every Browser Driver uses an HTTP server. Once the browser driver receives the URL, it processes the request by passing it to the real browser over HTTP. And then all your commands in the Selenium scripts will be executed.
     
