@@ -146,7 +146,7 @@ On a high-level, Selenium WebDriver works in three steps:
 
         driver = webdriver.Chrome(options = options, executable_path = exec_path)
 
-        driver.get("https://www.techwithti.net/")
+        driver.get("https://www.techwithtim.net/")
     
 As soon as you complete writing your code, execute the program. The above code will result in the launching of the Chrome browser which will navigate to the BrowserStack website.
     
