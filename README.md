@@ -1,5 +1,7 @@
 # Selenium
 
+[Selenium-python](https://selenium-python.readthedocs.io/installation.html)
+
 ## XML Document
 
 * XML stands for eXtensible Markup Language
@@ -177,7 +179,7 @@ If it’s a GET request then it results in a response that will be generated at 
         driver.get("https://www.techwithtim.net/")
         print(driver.title)
         
-### Step 2: Locate a web element on the webpage via locators in selenium.   
+### Step 2: Navigate to the required web page and locate a web element on the webpage via locators in selenium   
     
         search = driver.find_element_by_name("s")
     
