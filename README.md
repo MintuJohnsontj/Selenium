@@ -187,3 +187,12 @@ If it’s a GET request then it results in a response that will be generated at 
     
         search.send_keys("python")
     
+## Synchronization & Waits
+    
+### 1. Implicit wait
+    
+    Based on time
+ 
+### 2. Explicit wait  
+    
+    
