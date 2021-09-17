@@ -35,7 +35,7 @@ Syntax for XPath selenium:
   
 XPath contains the path of the element situated at the web page. Standard XPath syntax for creating XPath is:
   
-  Xpath=//tagname[@attribute='value']
+        Xpath=//tagname[@attribute='value']
   
 
 * // :	Select current node.
