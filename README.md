@@ -195,4 +195,12 @@ If it’s a GET request then it results in a response that will be generated at 
  
 ### 2. Explicit wait  
     
-    
+## Selenium vs Scrapy
+        
+The two Python web scraping frameworks are created to do different jobs. Selenium is only used to automate web browser interaction, Scrapy is used to download HTML, process data and save it.
+        
+### Javascript
+
+We should use some tool such as Dev Tool from Chrome to help us figure out how the data is displayed on the dynamic page of target site. If the data is included in html source code, both frameworks can work fine and we can choose one as we like. But in some cases the data show up after many ajax/pjax requests, the workflow make it hard to use Scrapy to extract the data. If it faced with this situation, it is recommended to use Selenium instead. 
+
+        
