@@ -196,11 +196,24 @@ If it’s a GET request then it results in a response that will be generated at 
 ### 2. Explicit wait  
     
 ## Selenium vs Scrapy
-        
+ 
+[Framework comparisson](https://www.accordbox.com/blog/web-scraping-framework-review-scrapy-vs-selenium/)
+
 The two Python web scraping frameworks are created to do different jobs. Selenium is only used to automate web browser interaction, Scrapy is used to download HTML, process data and save it.
-        
+
 ### Javascript
 
-We should use some tool such as Dev Tool from Chrome to help us figure out how the data is displayed on the dynamic page of target site. If the data is included in html source code, both frameworks can work fine and we can choose one as we like. But in some cases the data show up after many ajax/pjax requests, the workflow make it hard to use Scrapy to extract the data. If it faced with this situation, it is recommended to use Selenium instead. 
+We should use some tool such as Dev Tool from Chrome to help us figure out how the data is displayed on the dynamic page of target site. If the data is included in html source code, both frameworks can work fine and we can choose one as we like. But in some cases the data show up after many ajax/pjax requests, the workflow make it hard to use Scrapy to extract the data. If it faced with this situation, it is recommended to use Selenium instead.  
 
-        
+### Data Size
+
+Before coding, we need to estimiate the data size of the extracted data, and the urls need to visit. Scrapy only visit the url you told him, but Selenium will control the browser to visit all js file, css file and img file to render the page, that is why Selenium is much slower than Scrapy when crawling.
+
+If the data size is big, Scrapy is the better option because it can save you a lot of time and time is a valuable thing.
+
+### Extensibility
+
+The architecture of Scrapy is well designed, we can easily develop custom middleware or pipeline to add custom functionality. Scrapy project can be both robust and flexible. After developing several Scrapy projects, we will benefit from the architecture and like its design because it is easy to migrate from existing Scrapy spider project to another one.
+
+So if the project is small, the logic is not very complex and want job done quickly, we can use Selenium to keep your project simple. If the project needs more customization such as proxy, data pipeline, then the Scrapy might be the choice here.
+       
