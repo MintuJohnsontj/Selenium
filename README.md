@@ -1,31 +1,6 @@
 # Selenium
 
 [Selenium-python](https://selenium-python.readthedocs.io/installation.html)
-
-## XML Document
-
-* XML stands for eXtensible Markup Language
-* XML is a markup language much like HTML
-* XML was designed to store and transport data
-* XML was designed to be self-descriptive
-
-        <note>
-          <to>Tove</to>
-          <from>Jani</from>
-          <heading>Reminder</heading>
-          <body>Don't forget me this weekend!</body>
-        </note>
-  
-The XML above is quite self-descriptive:
-
-It has sender information, receiver information, a heading and a message body. But still, the XML above does not DO anything. XML is just information wrapped in tags. Someone must write a piece of software to send, receive, store, or display it.
-
-XML and HTML were designed with different goals:
-
-XML was designed to carry data - with focus on what data is. HTML was designed to display data - with focus on how data looks. XML tags are not predefined like HTML tags are.
-
-
-The XML language has no predefined tags. The tags in the example above (like <to> and <from>) are not defined in any XML standard. These tags are "invented" by the author of the XML document.
   
 ## XPath in Selenium
   
@@ -189,11 +164,41 @@ If it’s a GET request then it results in a response that will be generated at 
     
 ## Synchronization & Waits
     
+When a page is loaded by the browser, the elements within that page may load at different time intervals. This makes locating elements difficult: if an element is not yet present in the DOM, a locate function will raise an ElementNotVisibleException exception. Using waits, we can solve this issue. Waiting provides some slack between actions performed – mostly locating an element or any other operation with the element. Selenium Webdriver provides two types of waits – implicit & explicit.     
+    
 ### 1. Implicit wait
     
     Based on time
  
 ### 2. Explicit wait  
+
+There are some convenience methods provided that help you write code that will wait only as long as required. Explicit waits are achieved by using webdriverWait class in combination with expected_conditions.
+
+        element = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "myDynamicElement"))
+        
+This waits up to 10 seconds before throwing a TimeoutException unless it finds the element to return within 10 seconds. WebDriverWait by default calls the ExpectedCondition every 500 milliseconds until it returns successfully.
+
+#### Expected Conditions
+There are some common conditions that are frequently of use when automating web browsers. For example, presence_of_element_located, title_is, ad so on. one can check entire methods from here – Convenience Methods. Some of them are –
+
+* title_is
+* title_contains
+* presence_of_element_located
+* visibility_of_element_located
+* visibility_of
+* presence_of_all_elements_located
+* text_to_be_present_in_element
+* text_to_be_present_in_element_value
+* frame_to_be_available_and_switch_to_it
+* invisibility_of_element_located
+* element_to_be_clickable
+* staleness_of
+* element_to_be_selected
+* element_located_to_be_selected
+* element_selection_state_to_be
+* element_located_selection_state_to_be
+* alert_is_present
+
     
 ## Selenium vs Scrapy
  
