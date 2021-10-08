@@ -168,13 +168,13 @@ When a page is loaded by the browser, the elements within that page may load at 
     
 ### 1. Implicit wait
     
-    Based on time
+  Based on time
  
 ### 2. Explicit wait  
 
 There are some convenience methods provided that help you write code that will wait only as long as required. Explicit waits are achieved by using webdriverWait class in combination with expected_conditions.
 
-        element = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "myDynamicElement"))
+  element = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "myDynamicElement"))
         
 This waits up to 10 seconds before throwing a TimeoutException unless it finds the element to return within 10 seconds. WebDriverWait by default calls the ExpectedCondition every 500 milliseconds until it returns successfully.
 
