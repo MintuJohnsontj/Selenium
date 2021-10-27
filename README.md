@@ -203,3 +203,42 @@ The architecture of Scrapy is well designed, we can easily develop custom middle
 
 So if the project is small, the logic is not very complex and want job done quickly, we can use Selenium to keep your project simple. If the project needs more customization such as proxy, data pipeline, then the Scrapy might be the choice here.
        
+## Running Selenium Webdriver with a proxy
+
+[tutorialspoint.com](https://www.tutorialspoint.com/running-selenium-webdriver-with-a-proxy-in-python)
+
+We can run a proxy with Selenium webdriver in Python. A proxy is an essential component to do localization testing. We can take an e-commerce application and check if the language and currency visible is as per the user location.
+
+With the help of proxy within tests, we can verify if the website user interface matches with the location. We have to SET a proxy with below steps −
+
+* Import webdriver from Selenium package.
+
+* Define proxy server address.
+
+* Create an object of ChromeOptions class
+
+* Communication of proxy with ChromeOptions.
+
+* Summing options to Chrome() object.
+
+Code Implementation:
+
+        from selenium import webdriver
+        #proxy server definition
+        py = "128.21.0.0:8080"
+        #configure ChromeOptions class
+        chrome_options = WebDriverWait.ChromeOptions()
+        #proxy parameter to options
+        chrome_options.add_argument('--proxy-server=%s' % py)
+        #options to Chrome()
+        driver = webdriver.Chrome(chrome_options= chrome_options)
+        driver.implicitly_wait(0.6)
+        driver.get("https://www.tutorialspoint.com/index.htm")
+        
+Then, to check if a search field has the present user address we shall add the below code snippet:
+
+        def checkL(self):
+            self.driver.get(self.url)
+            st = self.driver.find_element_by_xpath('#loc')
+            #check location with assertion
+            self.assertEqual('India', st.text)        
