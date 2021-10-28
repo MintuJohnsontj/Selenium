@@ -244,3 +244,5 @@ Then, to check if a search field has the present user address we shall add the b
             self.assertEqual('India', st.text)        
 
 If we have to verify more than locations, we can create a method and pass the proxy address as an argument.
+
+
