@@ -1,4 +1,4 @@
-# Selenium
+# Selenium Webdriver
 
 [Selenium-python](https://selenium-python.readthedocs.io/installation.html)
     
@@ -6,36 +6,9 @@ Selenium refers to a suite of tools that are widely used in the testing communit
     
 It supports a number of browsers (Google Chrome 12+, Internet Explorer 7,8,9,10, Safari 5.1+, Opera 11.5, Firefox 3+) and operating systems (Windows, Mac, Linux/Unix).
     
-## Selenium Components
-    
-The Selenium test suite comprises four main components:-
-
-* Selenium IDE
-* Selenium RC
-* Selenium Webdriver
-* Selenium Grid
-
-### 1. Selenium IDE
-    
-Selenium IDE (Integrated Development Environment) is primarily a record/run tool. It is an Add-on or an extension available for both Firefox and Chrome that generates tests quickly through its functionality of record and playback. You don’t need to learn any test scripting language for authoring any functional tests.
-
-### 2. Selenium RC
-    
-In the case of working with Selenium RC (Remote Control), one must have good knowledge of at least one programming language. This tool allows you to develop responsive design tests in any scripting language of your choice. Server and client libraries are the two main components of Selenium RC. Its architecture is complex and it has its limitations.
-
-### 3. Selenium Webdriver   
-    
-Selenium WebDriver is an enhanced version of Selenium RC. It was introduced in the market to overcome the limitation faced in Selenium RC. Though it is an advanced version of RC, its architecture is completely different from that of RC. Just like Selenium RC, Selenium WebDriver too supports multiple programming platforms to provide wider flexibility and requires knowing any one programming language.
-
-### 4. Selenium Grid   
-    
-Selenium Grid is a tool that is used for concurrent execution of test cases on different browsers, machines, and operating systems simultaneously. This tool makes Cross-browser compatibility testing very easy. There are two versions of the Selenium Grid – the older version is known as Grid 1 and the recent version is known as Grid 2.
-    
-## Selenium Webdriver
-    
 Selenium WebDriver is a web framework that permits you to execute cross-browser tests. This tool is used for automating web-based application testing to verify that it performs expectedly.
 
-Selenium WebDriver allows you to choose a programming language to create test scripts. As discussed earlier, it is an advancement over Selenium RC to overcome a few limitations. Selenium WebDriver is not capable of handling window components, but this drawback can be overcome by using tools like Sikuli, Auto IT, etc.
+Selenium WebDriver allows you to choose a programming language to create test scripts. It is an advancement over Selenium RC to overcome a few limitations. Selenium WebDriver is not capable of handling window components, but this drawback can be overcome by using tools like Sikuli, Auto IT, etc.
     
 ### Selenium WebDriver Framework Architecture
     
@@ -245,4 +218,7 @@ Then, to check if a search field has the present user address we shall add the b
 
 If we have to verify more than locations, we can create a method and pass the proxy address as an argument.
 
+## Add custom HTTP headers
+
+[Add custom HTTP headers in Selenium Webdriver tests in Python in four simple steps](https://webelement.click/en/four_simple_steps_to_add_custom_http_headers_in_selenium_webdriver_tests_in_python)
 
